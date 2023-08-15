@@ -33,22 +33,14 @@
 // ✔ Выведите в консоль тип данных, убедитесь что количество и цена тип данных numbers, если это не так, то поправьте
 // ✔ В консоль выведите строку со значением количество товара, наименование и общую сумму 
   const productMod = prompt('Product name');
-  let numMod = prompt('Quantity of goods');
+  const numMod = +prompt('Quantity of goods');
   const categoryMod = prompt('Product category');
-  let priceMod = prompt('Product price');
-  numMod = Number(numMod);
-  priceMod = Number(priceMod);
-  const sumMod = numMod * priceMod;
+  const priceMod = +prompt('Product price');
 
-  console.log(`Product name: `, productMod);
-  console.log(`Quantity of goods: `, numMod);
-  console.log(`Product category: `, categoryMod);
-  console.log(`Product price: `, priceMod);
+  console.log(`Product name: ${productMod} type: ${typeof productMod}`);
+  console.log(`Quantity of goods: ${numMod} type: ${typeof numMod}`);
+  console.log(`Product category: ${categoryMod} type: ${typeof categoryMod}`);
+  console.log(`Product price: ${priceMod} type: ${typeof priceMod}`);
   
-  console.log(`Product name: `, typeof productMod);
-  console.log(`Quantity of goods: `, typeof numMod);
-  console.log(`Product category: `, typeof categoryMod);
-  console.log(`Product price: `, typeof priceMod);
-  
-  console.log(`In stock ` + numMod +  ` product units, ` + productMod + `, for the amount of ` + sumMod + ` wooden`);
+  console.log(`In stock ${numMod} product units, ${productMod} for the amount of ${numMod * priceMod} wooden`);
 }
